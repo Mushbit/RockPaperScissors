@@ -29,7 +29,7 @@ function playRound(computerSelection, playerSelection) {
             case 'scissors':
                 return 'You rocked up my scissors! Computer wins!';
             default:
-                return 'Gotta answer something first!';
+                return 'Gibberish! Computer Wins by default!';
         }
     // If computerPlay() picks paper
     } else if (computerSelection === 'paper') {
@@ -42,20 +42,20 @@ function playRound(computerSelection, playerSelection) {
             case 'scissors':
                 return 'Snip Snap, cut you in a thousand pieces! Player wins!';
             default:
-                return 'Gotta answer something first!';
+                return 'Gibberish! Computer Wins by default!';
         }
-    // If computerPlay() picks scissors
+    // Else computerPlay() picks scissors
     } else {
 
         switch (playerSelection.toLowerCase()) {
             case 'rock':
                 return 'I will, I will, rock you...r scissors! Player wins!';
             case 'paper':
-                return 'your scissors cut me to pieces! Computer wins';
+                return 'your scissors cut me to pieces! Computer wins!';
             case 'scissors':
                 return 'When fighting with scissors, no one wins! Tied!';
             default:
-                return 'Gotta answer something first!';
+                return 'Gibberish! Computer Wins by default!';
         }
     }
 }
@@ -63,7 +63,7 @@ function playRound(computerSelection, playerSelection) {
 function game() {
     let result;
     for (let i = 0; i < 5; i++) {
-        // Player prompted to input rock, paper or scissors
+        // Player prompted to picks rock, paper or scissors
         let playerSelection = prompt( 'What will your hand be?')
         // Calls computerPlay() to pick randomly
         let computerSelection = computerPlay()
